@@ -1,0 +1,28 @@
+@base = http://localhost:8080
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJNOTI2ellQb1gwZnZUMDNtIiwidXNlcm5hbWUiOiJhc2h1dG9zaCIsImlhdCI6MTY0NzQwMzU3NCwiZXhwIjoxNjQ4MDA4Mzc0LCJpc3MiOiJpbnZpei5haSIsInN1YiI6InVzZXJJbmZvIn0.okVMJgm3518rxHFespZcX1cYxrzGXNgxjEBCd96dlfw
+
+POST {{base}}/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"ashutosh1",
+    "password":"singhai"
+}
+
+###
+
+POST {{base}}/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"ashutosh",
+    "password":"singhai"
+}
+
+###
+
+GET {{base}}/api/words/list
+Content-Type: application/json
+x-access-token: {{token}}
+
+
